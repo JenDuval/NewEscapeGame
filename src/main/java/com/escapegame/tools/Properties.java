@@ -10,7 +10,6 @@ public class Properties {
 
     //défini le nombre de chance en mode Challenger et Duel
     public static int nbTurn = 5;
-    public static int nbTurnVersus = nbTurn * 2;
 
     //Activé le mode dev, permet de voir la combinaison en mode Challenger et Versus
     public static boolean develope = true;
