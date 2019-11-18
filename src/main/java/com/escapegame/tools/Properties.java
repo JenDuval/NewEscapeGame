@@ -14,5 +14,4 @@ public class Properties {
 
     //Activé le mode dev, permet de voir la combinaison en mode Challenger et Versus
     public static boolean develope = true;
-
 }

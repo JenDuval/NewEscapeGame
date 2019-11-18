@@ -6,7 +6,6 @@ import com.escapegame.mode.Mode;
 import com.escapegame.mode.Versus;
 import com.escapegame.tools.Captures;
 import com.escapegame.tools.Display;
-import com.escapegame.tools.FAQ;
 
 public class Main {
     public static void main(String[] args) {
