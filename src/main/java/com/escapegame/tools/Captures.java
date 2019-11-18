@@ -37,6 +37,11 @@ public class Captures {
         return rest;
     }
 
+    /**
+     *
+     Enter a number of the size defined by nosc = number of secret code
+     * @param nb number entry
+     */
     public static int[] readNumber(int nb) {
         String line = sc.nextLine();
 

@@ -17,6 +17,9 @@ public abstract class Mode {
 
     boolean end=false;
 
+    /**
+     * Allows you to start the desired game mode
+     */
     public void startGame(){
         playeur = new Player();
         ia = new IA();
@@ -54,6 +57,10 @@ public abstract class Mode {
 
     }
 
+    /**
+     * Displays the end menu and allows you to choose to replay, play another game mode or exit the game
+     * @return return the player's choice or null
+     */
     public String endMenu() {
         Mode mode;
         Display.write("Que voulez-vous faire ? \n\n1: Rejouer à ce mode jeu\n2: Retouner au menu\n3: Quitter l'Escape Game");
@@ -76,10 +83,23 @@ public abstract class Mode {
             return null;
     }
 
+    /**
+     * Prepares rounds
+     */
     protected abstract void prepareRound();
 
+    /**
+     * The turns of the game
+     * Lets know who is playing.
+     * @return Boolean that lets you know if the player has won or lost.
+     * If the boolean is at the end of the game because the player wins
+     */
     protected abstract boolean turnGame();
 
+    /**
+     * Get the name of the game mode
+     * @return name of the game mode
+     */
     protected abstract String getNameGame();
 
 }

@@ -1,7 +1,10 @@
 package com.escapegame.tools;
 
+/**
+ * Property file
+ */
 public class Properties {
-    //définit la taille de la combinaison à deviner : nosc = nuber of secret code
+    //définit la taille de la combinaison à deviner : nosc = number of secret code
     public static int nosc = 4;
 
     //définit les nombres min et max autorisés dans une combinaison

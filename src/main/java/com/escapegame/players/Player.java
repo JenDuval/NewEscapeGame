@@ -9,6 +9,11 @@ import static com.escapegame.players.IA.totale;
 public class Player extends Gameur {
     private static String win = "";
     public static int[] number;
+
+    /**
+     * Allows you to generate the win content that allows you to compare with the total to know if the player has won or lost
+     * Generate win compared to nosc
+     */
     private void setWin(){
         for (int i = 1; i < nosc; i++){
             win += "=";

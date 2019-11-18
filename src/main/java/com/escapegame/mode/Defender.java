@@ -4,8 +4,6 @@ import com.escapegame.tools.Captures;
 import com.escapegame.tools.Display;
 import com.escapegame.tools.FAQ;
 
-import static com.escapegame.tools.Properties.nbTurn;
-
 public class Defender extends Mode {
 
     @Override

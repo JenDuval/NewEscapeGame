@@ -1,5 +1,8 @@
 package com.escapegame.tools;
 
+/**
+ * The rules is unfolding part as a story
+ */
 public class FAQ {
     public static void faqChallenger(){
         Display.write( "Vous êtes kidnappé par un individue masqué qui vous assome violament avec une batte\n"
