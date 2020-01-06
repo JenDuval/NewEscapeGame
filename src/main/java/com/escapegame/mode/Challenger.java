@@ -5,8 +5,6 @@ import com.escapegame.tools.Display;
 import com.escapegame.tools.FAQ;
 import com.escapegame.tools.Properties;
 
-import static com.escapegame.tools.Properties.nbTurn;
-
 public class Challenger extends Mode {
     @Override
     protected void prepareRound() {

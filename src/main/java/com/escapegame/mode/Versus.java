@@ -29,6 +29,8 @@ public class Versus extends Mode {
             i++;
             Display.write("Vous êtes le Défenseur.");
             int[] propositions = ia.suggestion();
+            endWin = "Vous avez perdu !!!!";
+            endLose = "Vous avez gagné !!!!";
             return  playeur.reply(propositions);
         } else {
             i++;
@@ -36,6 +38,8 @@ public class Versus extends Mode {
             if (Properties.develope)
                 Display.write("(Combinaison secrète : " + ia.getCombinaisonString() + ")");
             int[] proposition = playeur.suggestion();
+            endWin = "Vous avez gagné !!!!";
+            endLose = "Vous avez perdu !!!!";
             return ia.reply(proposition);
         }
     }

@@ -14,6 +14,8 @@ import static com.escapegame.tools.Properties.nosc;
 public abstract class Mode {
     Gameur playeur;
     Gameur ia;
+    public String endWin = "Vous avez gagné !!!!";
+    public String endLose = "Vous avez perdu !!!!";
 
     boolean end=false;
 
@@ -23,8 +25,6 @@ public abstract class Mode {
     public void startGame(){
         playeur = new Player();
         ia = new IA();
-        String win = "";
-        String lose = "";
 
         prepareRound();
 
@@ -41,17 +41,11 @@ public abstract class Mode {
             end = turnGame();
             numbTurn++;
         }
-       if(getNameGame().equals("Defendeur")) {
-           win = "Vous avez perdu !!!!";
-           lose = "Vous avez gagné !!!!";
-       } else {
-           win = "Vous avez gagné !!!!";
-           lose = "Vous avez perdu !!!!";
-       }
+
         if(end)
-            Display.write(win);
+            Display.write(endWin);
         else
-            Display.write(lose);
+            Display.write(endLose);
 
         this.endMenu();
 
@@ -66,16 +60,16 @@ public abstract class Mode {
         Display.write("Que voulez-vous faire ? \n\n1: Rejouer à ce mode jeu\n2: Retouner au menu\n3: Quitter l'Escape Game");
         int m = Captures.readInt(1,3);
         if(m==1) {
-            if(getNameGame().equals("Challenger"))
+            if (getNameGame().equals("Challenger")) {
                 mode = new Challenger();
-            else if(getNameGame().equals("Defender"))
+            } else if(getNameGame().equals("Defendeur")){
                 mode = new Defender();
-            else
+            } else {
                 mode = new Versus();
+            }
 
             mode.startGame();
-        }
-        else if(m==2)
+        } else if(m==2)
             Main.menu();
         else
             System.exit(1);

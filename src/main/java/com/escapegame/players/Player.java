@@ -14,8 +14,8 @@ public class Player extends Gameur {
      * Allows you to generate the win content that allows you to compare with the total to know if the player has won or lost
      * Generate win compared to nosc
      */
-    private void setWin(){
-        for (int i = 1; i < nosc; i++){
+    public static void setWin(){
+        for (int i = 0; i < nosc; i++){
             win += "=";
         }
     }
@@ -42,19 +42,18 @@ public class Player extends Gameur {
     @Override
     public boolean reply(int[] proposition) {
         totale = "";
-        setWin();
-        boolean end = true;
+        boolean end = false;
         String num = "";
+
         for (int i = 0; i < proposition.length; i++) {
            num += proposition[i];
         }
 
         Display.write("Proposition : " + num + " -> Réponse :");
         totale = Captures.readString();
-        for (int i = 0; i < proposition.length; i++) {
-            if(!totale.equals(win))
-                end = false;
-        }
+
+        if(totale.equals(win))
+            end = true;
 
         return end;
     }
