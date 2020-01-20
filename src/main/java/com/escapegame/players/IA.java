@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class IA extends Gamer {
     public static String total;
-    public static String totale;
+    public static String totalBis;
     int[] max = new int[Configuration.nosc];
     int[] min = new int[Configuration.nosc];
     Random r = new Random();
@@ -24,9 +24,9 @@ public class IA extends Gamer {
     @Override
     public int[] suggestion() {
         String[] splitArray = null;
-        splitArray = totale.split("");
+        splitArray = totalBis.split("");
         for (int i = 0; i < combinaisonDef.length; i++) {
-            if (totale.equals("")) {
+            if (totalBis.equals("")) {
                 max[i] = 9;
                 min[i] = 0;
                 combinaisonDef[i] = min[i] + r.nextInt(max[i] -  min[i]);

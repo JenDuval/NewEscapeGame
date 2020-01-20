@@ -4,7 +4,7 @@ import com.escapegame.tools.Captures;
 import com.escapegame.tools.Display;
 
 import static com.escapegame.tools.Configuration.nosc;
-import static com.escapegame.players.IA.totale;
+import static com.escapegame.players.IA.totalBis;
 
 public class Player extends Gamer {
     private static String checkEndTurn = "";
@@ -14,7 +14,7 @@ public class Player extends Gamer {
      * Allows you to generate the win content that allows you to compare with the total to know if the player has won or lost
      * Generate win compared to nosc
      */
-    public static void setWin(){
+    public static void setCheckEndTurn(){
         for (int i = 0; i < nosc; i++){
             checkEndTurn += "=";
         }
@@ -22,7 +22,7 @@ public class Player extends Gamer {
 
     @Override
     public int[] setCombinaison() {
-        totale = "";
+        totalBis = "";
         Display.write("Vous êtes dans le mode de jeu Défendeur.\n"
                 + "Entrez votre code secret :");
         number =  Captures.readNumber(nosc);
@@ -42,7 +42,7 @@ public class Player extends Gamer {
     //TODO
     @Override
     public boolean reply(int[] proposition) {
-        totale = "";
+        totalBis = "";
         boolean end = false;
         String num = "";
 
@@ -51,9 +51,9 @@ public class Player extends Gamer {
         }
 
         Display.write("Proposition : " + num + " -> Réponse :");
-        totale = Captures.readString();
+        totalBis = Captures.readString();
 
-        if(totale.equals(checkEndTurn))
+        if(totalBis.equals(checkEndTurn))
             end = true;
 
         return end;

@@ -1,5 +1,9 @@
 package com.escapegame.tools;
 
+import com.escapegame.players.Player;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.util.Properties;
 
@@ -7,6 +11,8 @@ import java.util.Properties;
  * Property file
  */
 public class Configuration {
+    private static final Logger logger = LogManager.getLogger(Configuration.class);
+
     //définit la taille de la combinaison à deviner : nosc = number of secret code
     public static int nosc;
 
@@ -32,8 +38,9 @@ public class Configuration {
             nbTurn = Integer.parseInt(prop.getProperty("number.turn"));
             dev = Boolean.parseBoolean(prop.getProperty("mode.developper"));
 
+            Player.setCheckEndTurn();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.debug(e);
         }
     }
 }
