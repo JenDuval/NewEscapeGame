@@ -11,7 +11,7 @@ import com.escapegame.tools.Display;
 
 public class Main {
     public static void main(String[] args) {
-        //
+        // initializes configurations in the "configuration.properties" file and sets the variable to check the results of the combinations submitted.
         Configuration.startConf();
 
         menu();
