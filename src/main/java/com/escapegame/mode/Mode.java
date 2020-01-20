@@ -97,8 +97,15 @@ public abstract class Mode {
      */
     protected abstract String getNameGame();
 
+    /**
+     * Displays the ending text if the player is a winner.
+     * @return String
+     */
     protected abstract String getDisplayEndWin();
 
+    /**
+     * Displays the ending text if the player is a loser.
+     * @return String
+     */
     protected abstract String getDisplayEndLose();
-
 }
