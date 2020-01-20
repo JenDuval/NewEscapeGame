@@ -15,13 +15,13 @@ public class Challenger extends Mode {
         if(faqc == 1)
             FAQ.faqChallenger();
 
-        ia.setCombinaison();
+        ia.setCombination();
     }
 
     @Override
     protected boolean turnGame() {
         if(Configuration.dev)
-            Display.write("(Combinaison secrète : " + ia.getCombinaisonString()+")");
+            Display.write("(Combinaison secrète : " + ia.getCombinationString()+")");
 
         int[] proposition = playeur.suggestion();
         return ia.reply(proposition);

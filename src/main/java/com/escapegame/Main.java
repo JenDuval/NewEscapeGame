@@ -18,7 +18,10 @@ public class Main {
     }
 
     public static void menu(){
-        Display.write("Choisissez votre mode de jeu :\n1: Challenger\n2: Défenseur\n3: Duel");
+        Display.write("Choisissez votre mode de jeu :\n"
+                + "1: Challenger\n"
+                + "2: Défenseur\n"
+                + "3: Duel");
 
         int m = Captures.readInt(1,3);
         Mode mode;

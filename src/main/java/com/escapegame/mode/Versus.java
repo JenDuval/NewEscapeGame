@@ -19,8 +19,8 @@ public class Versus extends Mode {
         int faqc = Captures.readInt(1,2);
         if(faqc == 1)
             FAQ.faqVersus();
-        ia.setCombinaison();
-        playeur.setCombinaison();
+        ia.setCombination();
+        playeur.setCombination();
     }
 
     @Override
@@ -36,7 +36,7 @@ public class Versus extends Mode {
             i++;
             Display.write("Vous êtes le Challenger.");
             if (Configuration.dev)
-                Display.write("(Combinaison secrète : " + ia.getCombinaisonString() + ")");
+                Display.write("(Combinaison secrète : " + ia.getCombinationString() + ")");
             int[] proposition = playeur.suggestion();
             player = false;
             return ia.reply(proposition);

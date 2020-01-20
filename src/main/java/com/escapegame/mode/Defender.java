@@ -14,7 +14,7 @@ public class Defender extends Mode {
         int faqc = Captures.readInt(1,2);
         if(faqc == 1)
             FAQ.faqDefender();
-        playeur.setCombinaison();
+        playeur.setCombination();
     }
 
     @Override

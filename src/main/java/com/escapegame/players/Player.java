@@ -4,7 +4,7 @@ import com.escapegame.tools.Captures;
 import com.escapegame.tools.Display;
 
 import static com.escapegame.tools.Configuration.nosc;
-import static com.escapegame.players.IA.totalBis;
+import static com.escapegame.players.IA.replyPlayer;
 
 public class Player extends Gamer {
     private static String checkEndTurn = "";
@@ -21,8 +21,8 @@ public class Player extends Gamer {
     }
 
     @Override
-    public int[] setCombinaison() {
-        totalBis = "";
+    public int[] setCombination() {
+        replyPlayer = "";
         Display.write("Vous êtes dans le mode de jeu Défendeur.\n"
                 + "Entrez votre code secret :");
         number =  Captures.readNumber(nosc);
@@ -42,7 +42,7 @@ public class Player extends Gamer {
     //TODO
     @Override
     public boolean reply(int[] proposition) {
-        totalBis = "";
+        replyPlayer = "";
         boolean end = false;
         String num = "";
 
@@ -51,9 +51,9 @@ public class Player extends Gamer {
         }
 
         Display.write("Proposition : " + num + " -> Réponse :");
-        totalBis = Captures.readString();
+        replyPlayer = Captures.readString();
 
-        if(totalBis.equals(checkEndTurn))
+        if(replyPlayer.equals(checkEndTurn))
             end = true;
 
         return end;
