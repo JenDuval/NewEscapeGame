@@ -19,7 +19,7 @@ public class Challenger extends Mode {
     @Override
     protected boolean turnGame() {
         if(Configuration.developpe)
-            Display.write("(Combinaison secrète : "+ia.getCombinaisonString()+")");
+            Display.write("(Combinaison secrète : " + ia.getCombinaisonString()+")");
 
         int[] proposition = playeur.suggestion();
         return ia.reply(proposition);
@@ -39,6 +39,5 @@ public class Challenger extends Mode {
     protected String getDisplayEndLose() {
         return "Vous avez perdu !!!!";
     }
-
 
 }

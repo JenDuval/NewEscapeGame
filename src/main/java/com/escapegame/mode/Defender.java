@@ -8,7 +8,9 @@ public class Defender extends Mode {
 
     @Override
     protected void prepareRound() {
-        Display.write("Vous êtes dans le mode de jeu Défenseur.\nSouhaitez-vous avoir la mise en situation ? (Recommander pour votre première game)\nIndiquez par 1 (oui) ou 2 (non) votre choix. ");
+        Display.write("Vous êtes dans le mode de jeu Défenseur.\n"
+                + "Souhaitez-vous avoir la mise en situation ? (Recommander pour votre première game)\n"
+                + "Indiquez par 1 (oui) ou 2 (non) votre choix. ");
         int faqc = Captures.readInt(1,2);
         if(faqc == 1)
             FAQ.faqDefender();
