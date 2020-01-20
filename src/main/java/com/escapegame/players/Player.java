@@ -11,7 +11,7 @@ public class Player extends Gamer {
     public static int[] number;
 
     /**
-     * Allows you to generate the win content that allows you to compare with the total to know if the player has won or lost
+     * Allows you to generate the checkEndTurn content that allows you to compare with the replyPlayer or replyIA to know if the player has won or lost
      * Generate win compared to nosc
      */
     public static void setCheckEndTurn(){
