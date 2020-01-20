@@ -32,7 +32,7 @@ public abstract class Mode {
         }
 
         if(!Configuration.dev)
-            Display.write("(Combinaison secrète : "+ code +")");
+            Display.write("(Combinaison secrète : " + code + ")");
 
         int numbTurn=0;
         while (!end && numbTurn < nbTurn) {

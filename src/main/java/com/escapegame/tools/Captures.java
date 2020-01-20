@@ -107,7 +107,7 @@ public class Captures {
             } else
                 return total;
         } else {
-            logger.debug("Cette valeur n'est pas autorisée" + splitArray.length);
+            logger.debug("Cette valeur n'est pas autorisée " + splitArray.length);
 
             return readString();
         }
