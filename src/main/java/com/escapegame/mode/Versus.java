@@ -35,7 +35,7 @@ public class Versus extends Mode {
         } else {
             i++;
             Display.write("Vous êtes le Challenger.");
-            if (Configuration.developpe)
+            if (Configuration.developper)
                 Display.write("(Combinaison secrète : " + ia.getCombinaisonString() + ")");
             int[] proposition = playeur.suggestion();
             player = false;

@@ -31,7 +31,7 @@ public abstract class Mode {
             code += "_ ";
         }
 
-        if(!Configuration.developpe)
+        if(!Configuration.developper)
             Display.write("(Combinaison secrète : "+ code +")");
 
         int numbTurn=0;

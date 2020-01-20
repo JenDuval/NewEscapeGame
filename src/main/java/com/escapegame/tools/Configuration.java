@@ -18,7 +18,7 @@ public class Configuration {
     public static int nbTurn;
 
     //Activé le mode dev, permet de voir la combinaison en mode Challenger et Versus
-    public static boolean developpe;
+    public static boolean developper;
 
     public static void startConf(){
         Properties prop = null;
@@ -30,7 +30,7 @@ public class Configuration {
             numberMin = Integer.parseInt(prop.getProperty("number.minimum"));
             numberMax = Integer.parseInt(prop.getProperty("number.maximum"));
             nbTurn = Integer.parseInt(prop.getProperty("number.turn"));
-            developpe = Boolean.parseBoolean(prop.getProperty("mode.developpe"));
+            developper = Boolean.parseBoolean(prop.getProperty("mode.developper"));
 
         } catch (IOException e) {
             e.printStackTrace();
