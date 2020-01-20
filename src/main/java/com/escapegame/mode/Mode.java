@@ -1,7 +1,7 @@
 package com.escapegame.mode;
 
 import com.escapegame.Main;
-import com.escapegame.players.Gameur;
+import com.escapegame.players.Gamer;
 import com.escapegame.players.IA;
 import com.escapegame.players.Player;
 import com.escapegame.tools.Captures;
@@ -12,8 +12,8 @@ import static com.escapegame.tools.Configuration.nbTurn;
 import static com.escapegame.tools.Configuration.nosc;
 
 public abstract class Mode {
-    Gameur playeur;
-    Gameur ia;
+    Gamer playeur;
+    Gamer ia;
 
     boolean end = false;
 
@@ -55,7 +55,10 @@ public abstract class Mode {
      */
     public String endMenu() {
         Mode mode;
-        Display.write("Que voulez-vous faire ? \n\n1: Rejouer à ce mode jeu\n2: Retouner au menu\n3: Quitter l'Escape Game");
+        Display.write("Que voulez-vous faire ? \n\n"
+                + "1: Rejouer à ce mode jeu\n"
+                + "2: Retouner au menu\n"
+                + "3: Quitter l'Escape Game");
         int m = Captures.readInt(1,3);
         if(m==1) {
             if (getNameGame().equals("Challenger")) {

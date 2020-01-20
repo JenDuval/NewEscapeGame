@@ -6,7 +6,7 @@ import com.escapegame.tools.Display;
 import static com.escapegame.tools.Configuration.nosc;
 import static com.escapegame.players.IA.totale;
 
-public class Player extends Gameur {
+public class Player extends Gamer {
     private static String checkEndTurn = "";
     public static int[] number;
 
@@ -23,7 +23,8 @@ public class Player extends Gameur {
     @Override
     public int[] setCombinaison() {
         totale = "";
-        Display.write("Vous êtes dans le mode de jeu Défendeur.\nEntrez votre code secret :");
+        Display.write("Vous êtes dans le mode de jeu Défendeur.\n"
+                + "Entrez votre code secret :");
         number =  Captures.readNumber(nosc);
         return number;
     }

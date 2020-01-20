@@ -6,7 +6,7 @@ import com.escapegame.tools.Configuration;
 import java.util.Random;
 
 
-public class IA extends Gameur {
+public class IA extends Gamer {
     public static String total;
     public static String totale;
     int[] max = new int[Configuration.nosc];

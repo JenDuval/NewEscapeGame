@@ -2,7 +2,7 @@ package com.escapegame.players;
 
 import com.escapegame.tools.Configuration;
 
-public abstract class Gameur {
+public abstract class Gamer {
     int[] combinaison = new int[Configuration.nosc];
     int[] combinaisonDef = new int[Configuration.nosc];
 
