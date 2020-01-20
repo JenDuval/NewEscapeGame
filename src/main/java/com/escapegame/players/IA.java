@@ -17,7 +17,7 @@ public class IA extends Gamer {
     public int[] setCombinaison() {
         for (int i = 0; i < combinaison.length; i++)
             combinaison[i] =
-                    (int) (Math.random() * (Configuration.numberMax + 1) - Configuration.numberMin) + Configuration.numberMin;
+                    (int) (Math.random() * (Configuration.nbMax + 1) - Configuration.nbMin) + Configuration.nbMin;
         return new int[0];
     }
 

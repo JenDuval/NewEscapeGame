@@ -20,7 +20,7 @@ public class Challenger extends Mode {
 
     @Override
     protected boolean turnGame() {
-        if(Configuration.developper)
+        if(Configuration.dev)
             Display.write("(Combinaison secrète : " + ia.getCombinaisonString()+")");
 
         int[] proposition = playeur.suggestion();
