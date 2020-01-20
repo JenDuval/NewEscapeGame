@@ -7,7 +7,7 @@ import static com.escapegame.tools.Configuration.nosc;
 import static com.escapegame.players.IA.totale;
 
 public class Player extends Gameur {
-    private static String win = "";
+    private static String checkEndTurn = "";
     public static int[] number;
 
     /**
@@ -16,7 +16,7 @@ public class Player extends Gameur {
      */
     public static void setWin(){
         for (int i = 0; i < nosc; i++){
-            win += "=";
+            checkEndTurn += "=";
         }
     }
 
@@ -52,7 +52,7 @@ public class Player extends Gameur {
         Display.write("Proposition : " + num + " -> Réponse :");
         totale = Captures.readString();
 
-        if(totale.equals(win))
+        if(totale.equals(checkEndTurn))
             end = true;
 
         return end;

@@ -9,6 +9,7 @@ import static com.escapegame.tools.Configuration.nbTurn;
 
 public class Versus extends Mode {
     int i;
+    boolean player;
 
     @Override
     protected void prepareRound() {
@@ -29,8 +30,7 @@ public class Versus extends Mode {
             i++;
             Display.write("Vous êtes le Défenseur.");
             int[] propositions = ia.suggestion();
-            endWin = "Vous avez perdu !!!!";
-            endLose = "Vous avez gagné !!!!";
+            player = true;
             return  playeur.reply(propositions);
         } else {
             i++;
@@ -38,8 +38,7 @@ public class Versus extends Mode {
             if (Configuration.developpe)
                 Display.write("(Combinaison secrète : " + ia.getCombinaisonString() + ")");
             int[] proposition = playeur.suggestion();
-            endWin = "Vous avez gagné !!!!";
-            endLose = "Vous avez perdu !!!!";
+            player = false;
             return ia.reply(proposition);
         }
     }
@@ -47,5 +46,21 @@ public class Versus extends Mode {
     @Override
     protected String getNameGame() {
         return "Versus";
+    }
+
+    @Override
+    protected String getDisplayEndWin() {
+        if(player)
+            return "Vous avez perdu !!!!";
+        else
+            return "Vous avez gagné !!!!";
+    }
+
+    @Override
+    protected String getDisplayEndLose() {
+        if(player)
+            return "Vous avez gagné !!!!";
+        else
+            return "Vous avez perdu !!!!";
     }
 }

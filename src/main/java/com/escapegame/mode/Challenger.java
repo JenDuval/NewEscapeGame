@@ -30,5 +30,15 @@ public class Challenger extends Mode {
         return "Challenger";
     }
 
+    @Override
+    protected String getDisplayEndWin() {
+        return "Vous avez gagné !!!!";
+    }
+
+    @Override
+    protected String getDisplayEndLose() {
+        return "Vous avez perdu !!!!";
+    }
+
 
 }

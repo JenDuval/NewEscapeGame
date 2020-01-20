@@ -14,10 +14,8 @@ import static com.escapegame.tools.Configuration.nosc;
 public abstract class Mode {
     Gameur playeur;
     Gameur ia;
-    public String endWin = "Vous avez gagné !!!!";
-    public String endLose = "Vous avez perdu !!!!";
 
-    boolean end=false;
+    boolean end = false;
 
     /**
      * Allows you to start the desired game mode
@@ -43,9 +41,9 @@ public abstract class Mode {
         }
 
         if(end)
-            Display.write(endWin);
+            Display.write(getDisplayEndWin());
         else
-            Display.write(endLose);
+            Display.write(getDisplayEndLose());
 
         this.endMenu();
 
@@ -95,5 +93,9 @@ public abstract class Mode {
      * @return name of the game mode
      */
     protected abstract String getNameGame();
+
+    protected abstract String getDisplayEndWin();
+
+    protected abstract String getDisplayEndLose();
 
 }
