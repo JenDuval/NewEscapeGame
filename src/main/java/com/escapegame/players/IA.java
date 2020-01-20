@@ -1,7 +1,7 @@
 package com.escapegame.players;
 
 import com.escapegame.tools.Display;
-import com.escapegame.tools.Properties;
+import com.escapegame.tools.Configuration;
 
 import java.util.Random;
 
@@ -9,15 +9,15 @@ import java.util.Random;
 public class IA extends Gameur {
     public static String total;
     public static String totale;
-    int[] max = new int[Properties.nosc];
-    int[] min = new int[Properties.nosc];
+    int[] max = new int[Configuration.nosc];
+    int[] min = new int[Configuration.nosc];
     Random r = new Random();
 
     @Override
     public int[] setCombinaison() {
         for (int i = 0; i < combinaison.length; i++)
             combinaison[i] =
-                    (int) (Math.random() * (Properties.numberMax + 1) - Properties.numberMin) + Properties.numberMin;
+                    (int) (Math.random() * (Configuration.numberMax + 1) - Configuration.numberMin) + Configuration.numberMin;
         return new int[0];
     }
 

@@ -6,10 +6,10 @@ import com.escapegame.players.IA;
 import com.escapegame.players.Player;
 import com.escapegame.tools.Captures;
 import com.escapegame.tools.Display;
-import com.escapegame.tools.Properties;
+import com.escapegame.tools.Configuration;
 
-import static com.escapegame.tools.Properties.nbTurn;
-import static com.escapegame.tools.Properties.nosc;
+import static com.escapegame.tools.Configuration.nbTurn;
+import static com.escapegame.tools.Configuration.nosc;
 
 public abstract class Mode {
     Gameur playeur;
@@ -33,7 +33,7 @@ public abstract class Mode {
             code += "_ ";
         }
 
-        if(!Properties.develope)
+        if(!Configuration.developpe)
             Display.write("(Combinaison secrète : "+ code +")");
 
         int numbTurn=0;

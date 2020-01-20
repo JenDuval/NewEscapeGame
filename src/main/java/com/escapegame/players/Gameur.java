@@ -1,10 +1,10 @@
 package com.escapegame.players;
 
-import com.escapegame.tools.Properties;
+import com.escapegame.tools.Configuration;
 
 public abstract class Gameur {
-    int[] combinaison = new int[Properties.nosc];
-    int[] combinaisonDef = new int[Properties.nosc];
+    int[] combinaison = new int[Configuration.nosc];
+    int[] combinaisonDef = new int[Configuration.nosc];
 
     /**
      * Recover the initialized combination at the beginning of the game.

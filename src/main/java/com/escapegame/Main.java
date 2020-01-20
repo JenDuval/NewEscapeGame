@@ -6,10 +6,12 @@ import com.escapegame.mode.Mode;
 import com.escapegame.mode.Versus;
 import com.escapegame.players.Player;
 import com.escapegame.tools.Captures;
+import com.escapegame.tools.Configuration;
 import com.escapegame.tools.Display;
 
 public class Main {
     public static void main(String[] args) {
+        Configuration.startConf();
         Player.setWin();
         menu();
     }

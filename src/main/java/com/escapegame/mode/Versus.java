@@ -3,9 +3,9 @@ package com.escapegame.mode;
 import com.escapegame.tools.Captures;
 import com.escapegame.tools.Display;
 import com.escapegame.tools.FAQ;
-import com.escapegame.tools.Properties;
+import com.escapegame.tools.Configuration;
 
-import static com.escapegame.tools.Properties.nbTurn;
+import static com.escapegame.tools.Configuration.nbTurn;
 
 public class Versus extends Mode {
     int i;
@@ -35,7 +35,7 @@ public class Versus extends Mode {
         } else {
             i++;
             Display.write("Vous êtes le Challenger.");
-            if (Properties.develope)
+            if (Configuration.developpe)
                 Display.write("(Combinaison secrète : " + ia.getCombinaisonString() + ")");
             int[] proposition = playeur.suggestion();
             endWin = "Vous avez gagné !!!!";

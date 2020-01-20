@@ -3,7 +3,7 @@ package com.escapegame.players;
 import com.escapegame.tools.Captures;
 import com.escapegame.tools.Display;
 
-import static com.escapegame.tools.Properties.nosc;
+import static com.escapegame.tools.Configuration.nosc;
 import static com.escapegame.players.IA.totale;
 
 public class Player extends Gameur {

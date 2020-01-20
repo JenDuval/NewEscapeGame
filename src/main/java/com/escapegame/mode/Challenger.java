@@ -3,7 +3,7 @@ package com.escapegame.mode;
 import com.escapegame.tools.Captures;
 import com.escapegame.tools.Display;
 import com.escapegame.tools.FAQ;
-import com.escapegame.tools.Properties;
+import com.escapegame.tools.Configuration;
 
 public class Challenger extends Mode {
     @Override
@@ -18,7 +18,7 @@ public class Challenger extends Mode {
 
     @Override
     protected boolean turnGame() {
-        if(Properties.develope)
+        if(Configuration.developpe)
             Display.write("(Combinaison secrète : "+ia.getCombinaisonString()+")");
 
         int[] proposition = playeur.suggestion();
