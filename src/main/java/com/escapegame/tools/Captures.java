@@ -97,22 +97,19 @@ public class Captures {
                 else if (splitArray[i].equals("="))
                     total += "=";
                 else {
-                    logger.debug("Cette valeur n'est pas autorisée");
                    error = true;
                 }
             }
 
-            if(error)
-                 return readString();
-            else
+            if(error) {
+                logger.debug("Cette valeur n'est pas autorisée");
+                return readString();
+            } else
                 return total;
         } else {
             logger.debug("Cette valeur n'est pas autorisée" + splitArray.length);
-            for (int i = 0; i < splitArray.length; i++) {
-                logger.debug(splitArray[i]);
-            }
-            readString();
+
+            return readString();
         }
-        return null;
     }
 }
